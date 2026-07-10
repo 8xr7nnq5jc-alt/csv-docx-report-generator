@@ -2,6 +2,12 @@
 
 A small Node.js web app that turns CSV uploads into downloadable Word reports with login, report type selection and activity logs.
 
+This demo was prepared for a client brief about wrapping existing Node.js/Python CSV-to-DOCX scripts in a simple internal web app.
+
+## Built for this client brief
+
+The requested workflow is represented end to end: a protected upload page, individual/team report selection, DOCX generation, activity logging and a clear integration point for the client's existing scripts and Word templates. The project is ready to adapt for Railway, Render or Fly.io deployment.
+
 ## Why this is useful
 
 Teams often have working scripts but no simple interface for non-technical users. This project demonstrates how a CSV-to-report workflow can be wrapped in a small internal tool with a clear upload flow, basic access control and an auditable activity log.
@@ -20,21 +26,17 @@ Teams often have working scripts but no simple interface for non-technical users
 
 ## Screenshots
 
-Add screenshots to `docs/screenshots/` using the capture list in [PORTFOLIO.md](PORTFOLIO.md):
-
-- Login screen
-- Upload and report builder
-- Individual/team selection
-- Download confirmation
-- Activity log
-- README/GitHub page
-- Project folder or terminal showing `npm start`
-
-Current demo captures:
+The repository includes a complete visual proof set:
 
 ![Login screen](docs/screenshots/01-login.png)
 
-![Upload workspace and activity log](docs/screenshots/02-upload-activity-log.png)
+![CSV upload workspace](docs/screenshots/02-upload.png)
+
+![Individual/team report selection](docs/screenshots/03-report-type.png)
+
+![Activity log](docs/screenshots/05-activity-log.png)
+
+![Generated Word report preview](docs/screenshots/04-generated-word-report.png)
 
 ## Demo access
 
@@ -75,6 +77,10 @@ CSV upload -> CSV parsing -> report type selection -> DOCX generation -> downloa
 ```
 
 The report-generation boundary is intentionally small so the demo can later call existing Node.js scripts, Python scripts or branded Word templates.
+
+## Client handoff
+
+The ready-to-send long message and short platform reply are in [PORTFOLIO.md](PORTFOLIO.md). The repository also includes `samples/sample-report-data.csv` and `sample-output.docx` so the flow can be reviewed immediately.
 
 ## Technology
 

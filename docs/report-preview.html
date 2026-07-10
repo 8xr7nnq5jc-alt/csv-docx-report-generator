@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Generated Word Report Preview</title>
+    <style>
+      :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #17212b; background: #eef1f4; }
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 40px 20px; }
+      .paper { width: min(820px, 100%); margin: 0 auto; padding: 58px 64px 64px; background: #fff; box-shadow: 0 12px 36px rgba(16, 24, 40, .12); }
+      h1 { margin: 0 0 28px; font-size: 32px; color: #123f63; }
+      h2 { margin: 32px 0 14px; font-size: 20px; color: #123f63; }
+      .metrics { display: grid; gap: 8px; margin-bottom: 28px; font-size: 15px; }
+      .metrics strong { display: inline-block; min-width: 126px; color: #344054; }
+      table { width: 100%; border-collapse: collapse; font-size: 13px; }
+      th, td { padding: 10px 9px; border: 1px solid #cfd6dd; text-align: left; vertical-align: top; }
+      th { background: #e9f1f7; color: #123f63; font-weight: 700; }
+      td:nth-child(3), td:nth-child(4) { text-align: right; }
+      .note { margin-top: 28px; color: #667085; font-size: 13px; line-height: 1.5; }
+      @media (max-width: 680px) { body { padding: 16px 8px; } .paper { padding: 32px 22px 36px; overflow-x: auto; } h1 { font-size: 27px; } table { min-width: 650px; } }
+    </style>
+  </head>
+  <body>
+    <main class="paper" aria-label="Generated Word report preview">
+      <h1>Team Report</h1>
+      <section class="metrics">
+        <div><strong>Source file:</strong> sample-report-data.csv</div>
+        <div><strong>Rows processed:</strong> 4</div>
+        <div><strong>First record:</strong> Maya</div>
+        <div><strong>Generated:</strong> Sample output</div>
+      </section>
+      <h2>Preview Data</h2>
+      <table>
+        <thead><tr><th>Name</th><th>Department</th><th>Completed Tasks</th><th>Revenue</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Maya</td><td>Sales</td><td>12</td><td>4800</td><td>Strong client follow-up</td></tr>
+          <tr><td>Youssef</td><td>Operations</td><td>9</td><td>3200</td><td>Needs updated assets</td></tr>
+          <tr><td>Lina</td><td>Marketing</td><td>15</td><td>6100</td><td>Ready for next campaign</td></tr>
+          <tr><td>Samir</td><td>Support</td><td>7</td><td>2100</td><td>Follow-up scheduled</td></tr>
+        </tbody>
+      </table>
+      <p class="note">This MVP can be customized with branded templates, editable report copy, charts, and cloud deployment.</p>
+    </main>
+  </body>
+</html>
+

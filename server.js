@@ -177,6 +177,5 @@ app.use((error, _req, res, _next) => {
 
 app.listen(PORT, () => {
   console.log(`CSV to DOCX report generator running at http://localhost:${PORT}`);
-  console.log(`Demo password: ${DEMO_PASSWORD}`);
 });
 

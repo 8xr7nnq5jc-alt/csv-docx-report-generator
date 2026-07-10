@@ -5,4 +5,7 @@ server.log
 server.err.log
 data/activity-log.json
 graphify-out/
+docs/docx-render/
+docs/preview-server.log
+docs/preview-server.err.log
 
