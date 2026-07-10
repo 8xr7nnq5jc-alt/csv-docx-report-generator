@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Generate downloadable Word reports from CSV data." />
+    <title>CSV to DOCX Report Generator</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="topbar">
+        <div class="brand">
+          <span class="brandMark" aria-hidden="true">CR</span>
+          <div>
+            <p class="eyebrow">Internal reporting workspace</p>
+            <h1>CSV to DOCX Report Generator</h1>
+            <p class="topbarCopy">Turn structured CSV data into a clean Word report in seconds.</p>
+          </div>
+        </div>
+        <button id="logoutButton" class="secondary hidden" type="button">Log out</button>
+      </section>
+
+      <section id="loginPanel" class="panel loginPanel">
+        <div class="panelHeader">
+          <div>
+            <p class="eyebrow">Protected workspace</p>
+            <h2>Sign in to continue</h2>
+          </div>
+          <span class="statusDot" aria-hidden="true"></span>
+        </div>
+        <form id="loginForm" class="stack">
+          <label for="password">
+            Password
+            <input id="password" name="password" type="password" placeholder="Enter password" autocomplete="current-password" required />
+          </label>
+          <button type="submit">Sign in</button>
+          <p id="loginStatus" class="status hint" role="status"></p>
+          <p class="hint">Demo access: <code>demo123</code></p>
+        </form>
+      </section>
+
+      <section id="toolPanel" class="workspace hidden">
+        <form id="reportForm" class="panel stack">
+          <div class="panelHeader">
+            <div>
+              <p class="eyebrow">Report builder</p>
+              <h2>Create a report</h2>
+            </div>
+            <span class="badge">DOCX</span>
+          </div>
+          <label for="reportType">
+            Report type
+            <select id="reportType" name="reportType">
+              <option value="individual">Individual report</option>
+              <option value="team">Team report</option>
+            </select>
+          </label>
+          <label for="csvFile">
+            CSV file
+            <input id="csvFile" name="csv" type="file" accept=".csv,text/csv" required />
+          </label>
+          <div class="fileHint">Maximum file size: 2 MB. CSV files only.</div>
+          <button id="generateButton" type="submit">Generate and download DOCX</button>
+          <p id="statusText" class="status hint" role="status">Choose a CSV file to begin.</p>
+        </form>
+
+        <section class="panel">
+          <div class="panelHeader sectionTitle">
+            <div>
+              <p class="eyebrow">Recent activity</p>
+              <h2>Activity log</h2>
+            </div>
+            <button id="refreshLogs" class="secondary" type="button">Refresh</button>
+          </div>
+          <div id="logList" class="logList"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
+
